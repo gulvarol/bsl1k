@@ -1,0 +1,31 @@
+{
+    "data_dir": "data/BSLCP",
+    "train_val_test_ratio": [0.8, 0.1, 0.1],
+    "target_tiers":["RH-IDgloss", "LH-IDgloss"],
+    "raw_anno_dir": "data/BSLCP/BSLCorpusAnnotations",
+    "raw_video_dir": "data/BSLCP/videos",
+    "trim_format": "%06d-%03d",
+    "force_resize": 256,
+    "pad_clip": 0.2,
+    "bsl1k_vocab": {
+        "video_dir": "videos-resized-25fps-256x256-bsl1k_vocab",
+        "anno_path": "data/BSLCP/json-annotations/gloss-timings-bsl1k_vocab.json",
+        "vocab_path": "data/bsldict/subtitles/data/words_mouthing0.8_1064_20.02.21.pkl",
+        "word_data_pkl": "data/BSLCP/info/bsl1k_vocab/word_data.pkl",
+        "info": "data/BSLCP/info/bsl1k_vocab/info.pkl"
+    },
+    "signdict_signbank": {
+        "video_dir": "videos-resized-25fps-256x256-signdict_signbank",
+        "anno_path": "data/BSLCP/json-annotations/gloss-timings-signdict_signbank.json",
+        "vocab_path": "data/bsldict/subtitles/data/words_signdict_signbank.pkl",
+        "word_data_pkl": "data/BSLCP/info/signdict_signbank/word_data.pkl",
+        "info": "data/BSLCP/info/signdict_signbank/info.pkl"
+    },
+    "BSLCP_all_glosses": {
+        "video_dir": "videos-resized-25fps-256x256-BSLCP_all_glosses",
+        "anno_path": "data/BSLCP/json-annotations/gloss-timings-BSLCP_all_glosses.json",
+        "word_data_pkl": "data/BSLCP/info/BSLCP_all_glosses/word_data.pkl",
+        "vocab_path": null,
+        "info": "data/BSLCP/info/BSLCP_all_glosses/info.pkl"
+    }
+}

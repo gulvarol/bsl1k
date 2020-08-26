@@ -1,0 +1,17 @@
+{
+    "bsl1k_vocab": {
+        "annos": "",
+        "info": "data/BSLCP/info/bsl1k_vocab/info-videos-resized-25fps-256x256-bsl1k_vocab.pkl",
+        "videos": "videos-resized-25fps-256x256-bsl1k_vocab"
+    },
+    "signdict_signbank": {
+        "annos": "",
+        "info": "data/BSLCP/info/signdict_signbank/info-videos-resized-25fps-256x256-signdict_signbank.pkl",
+        "videos": "videos-resized-25fps-256x256-signdict_signbank"
+    },
+    "BSLCP_all_glosses": {
+        "annos": "data/bbcsl/info/mouthings_20.02.23-2sec-window.pkl",
+        "info": "data/BSLCP/info/BSLCP_all_glosses/info-videos-resized-25fps-256x256-BSLCP_all_glosses.pkl",
+        "videos": "videos-resized-25fps-256x256-BSLCP_all_glosses"
+    }
+}

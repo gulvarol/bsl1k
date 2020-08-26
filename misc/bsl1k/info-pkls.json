@@ -1,0 +1,44 @@
+{
+    "original-mouthings": {
+        "annos": "data/bsl1k/info/mouthings_2020.02.12.pkl",
+        "info": "data/bsl1k/info/info.pkl",
+        "videos": "data/bsl1k/videos-resized-256fps-256x256",
+        "pose": "data/bsl1k/info/pose.pkl",
+        "face_bbox": "data/bsl1k/info/face_bbox.pkl",
+        "mouth_bbox": "data/bsl1k/info/mouth_bbox.pkl"
+    },
+    "1sec-window": {
+        "annos": "data/bsl1k/info/mouthings_20.02.23-1sec-window.pkl",
+        "info": "data/bsl1k/info/info_20.03.01-thr0.5-1sec-window-signhd.pkl",
+        "videos": "data/bsl1k/video_dirs/videos-resized-256fps-256x256-1sec-window-signhd"
+    },
+    "2sec-window": {
+        "annos": "data/bsl1k/info/mouthings_20.02.23-2sec-window.pkl",
+        "info": "data/bslk1/info/info_20.03.01-thr0.5-2sec-window-signhd.pkl",
+        "videos": "data/bsl1k/video_dirs/videos-resized-256fps-256x256-2sec-window-signhd"
+    },
+    "4sec-window": {
+        "annos": "data/bsl1k/info/mouthings_20.02.23-4sec-window.pkl",
+        "info": "data/bsl1k/info/info_20.03.01-thr0.5-4sec-window-signhd.pkl",
+        "videos": "data/bsl1k/video_dirs/videos-resized-256fps-256x256-4sec-window-signhd"
+    },
+    "8sec-window": {
+        "annos": "data/bsl1k/info/mouthings_20.02.23-8sec-window.pkl",
+        "info": "data/bsl1k/info/info_20.03.01-thr0.5-8sec-window-signhd.pkl",
+        "videos": "data/bsl1k/video_dirs/videos-resized-256fps-256x256-8sec-window-signhd"
+    },
+    "16sec-window": {
+        "annos": "data/bsl1k/info/mouthings_20.02.23-16sec-window.pkl",
+        "info": "data/bsl1k/info/info_20.03.01-thr0.5-16sec-window-signhd.pkl",
+        "videos": "data/bsl1k/video_dirs/videos-resized-256fps-256x256-16sec-window-signhd"
+    },
+    "human-annotated": {
+        "annos": "data/bsl1k_annotated/info/annotations_in_mouthing_format_2020.03.05.pkl",
+        "info": "data/bsl1k_annotated/info/info-annotated-videos-fixed.pkl",
+        "videos": "data/bsl1k_annotated/videos-resized-25fps-256x256-videos-fixed",
+        "pose": "data/bsl1k_annotated/info/pose.pkl",
+        "face_bbox": "data/bsl1k_annotated/info/face_bbox.pkl",
+        "mouth_bbox": "data/bsl1k_annotated/info/mouth_bbox.pkl"
+    }
+    
+}

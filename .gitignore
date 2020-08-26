@@ -1,0 +1,13 @@
+checkpoint
+data
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.m~
+.DS_Store
+._*
+.vscode/
+*.pth.tar
+*.pth
+demo/sample_data/inputs
