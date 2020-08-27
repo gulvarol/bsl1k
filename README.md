@@ -21,7 +21,7 @@
   * [Experiments on BSL-1K](https://github.com/gulvarol/bsl1k#experiments-on-bsl-1k)
   * [Experiments on Transfer](https://github.com/gulvarol/bsl1k#experiments-on-transfer)
 * [Note on BSL-1K data release](https://github.com/gulvarol/bsl1k#note-on-bsl-1k-data-release)
-* [Disclaimer](https://github.com/gulvarol/bsl1k#disclaimer)
+* [Limitations](https://github.com/gulvarol/bsl1k#limitations)
 * [Citation](https://github.com/gulvarol/bsl1k#citation)
 
 ## Setup
@@ -93,9 +93,9 @@ The videos may then be downloaded via:
 
 * In our folder organization, each dataset has a subfolder `info/` in which most pre-extracted annotations are kept:
   * `info/info.pkl`
-  * `info/pose.pkl` Pose is extracted for:
+  * `info/pose.pkl` [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) is extracted for:
     * `bsl1k` for a subset of the videos
-    * `msasl` and `wlasl` for all videos
+    * `msasl` and `wlasl` for all videos (we provide these within the `.tar` files)
 * We have pre-processed all of the video datasets to be at 256x256 spatial resolution. The pre-processing scripts can be found under the `misc` folder for each dataset. Using the original videos is possible, but is slower.
 * We have pre-processed WLASL and MSASL such that the video frames are stored in a pkl file, we then loaded the entire dataset in RAM. Setting `--ram_data` to 0 will not require this preprocessing step, and use the video files instead. The results are similar with and without this step.
 
@@ -156,7 +156,7 @@ python test.py
 | Model | ins. top-1 | ins. top-5 | cls. top-1 | cls. top-5 | Links |
 | - | - | - | - | - | - |
 | Random init. | 39.80 | 61.01 | 15.76 | 29.87 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_scratch/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_scratch/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_scratch/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_scratch/log.json) |
-| Gesture recognition | 39.80 | 61.01 | 15.76 | 29.87 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/log.json) |
+| Gesture recognition | 46.93 | 65.95 | 19.59 | 36.44 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pjester/log.json) |
 | Sign recognition | 69.90 | 83.45 | 44.97 | 62.73 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pwlasl/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pwlasl/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pwlasl/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pwlasl/log.json) |
 | Action recognition | 69.00 | 83.79 | 45.86 | 64.42 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pkinetics/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pkinetics/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pkinetics/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_pkinetics/log.json) |
 | Video pose distillation | 70.38 | 84.50 | 46.24 | 65.31 | [run](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_ppose/run.sh), [args](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_ppose/opt.pkl), [model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_ppose/model.pth.tar), [logs](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m8_l24_kws8_ppose/log.json) |
