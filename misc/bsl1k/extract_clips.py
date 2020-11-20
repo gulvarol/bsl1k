@@ -23,7 +23,6 @@ import tqdm
 import numpy as np
 from typeguard import typechecked
 from frozendict import frozendict
-from yaspi.yaspi import Yaspi
 from zsvision.zs_utils import BlockTimer, memcache
 from zsvision.zs_beartype import beartype
 from zsvision.zs_multiproc import starmap_with_kwargs
@@ -744,6 +743,9 @@ if __name__ == "__main__":
     episode2subset = get_episode2subset_map(args.subset2episode)
 
     if args.yaspify:
+        # Only import yaspi if requested
+        from yaspi.yaspi import Yaspi
+        
         with open(args.yaspi_defaults_path, "r") as f:
             yaspi_defaults = json.load(f)
         cmd_args = sys.argv

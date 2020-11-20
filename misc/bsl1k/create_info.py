@@ -23,7 +23,6 @@ from typing import Dict
 import cv2
 import numpy as np
 import tqdm
-from yaspi.yaspi import Yaspi
 from zsvision.zs_beartype import beartype
 from zsvision.zs_multiproc import starmap_with_kwargs
 from misc.bbcsl.extract_clips import load_british_mouthings
@@ -503,6 +502,9 @@ if __name__ == "__main__":
     episode2subset = get_episode2subset_map(args.subset2episode)
 
     if args.yaspify:
+        # Only import yaspi if requested
+        from yaspi.yaspi import Yaspi
+
         with open(args.yaspi_defaults_path, "r") as f:
             yaspi_defaults = json.load(f)
         cmd_args = sys.argv

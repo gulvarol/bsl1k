@@ -19,7 +19,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import tqdm
-from yaspi.yaspi import Yaspi
 from beartype.cave import NoneType
 from zsvision.zs_iterm import zs_dispFig
 from zsvision.zs_multiproc import starmap_with_kwargs
@@ -211,6 +210,9 @@ def main():
         os.system(str(Path.home() / "configure_tmp_data.sh"))
 
     if args.yaspify:
+        # Only import yaspi if requested
+        from yaspi.yaspi import Yaspi
+
         with open(args.yaspi_defaults_path, "r") as f:
             yaspi_defaults = json.load(f)
         cmd_args = sys.argv

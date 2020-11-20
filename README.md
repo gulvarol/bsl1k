@@ -26,6 +26,8 @@
 
 ## Setup
 
+**Requires: python 3.6.**  (*some non-essential pre-processing scripts require python 3.7*)
+
 ``` bash
 # Clone this repository
 git clone https://github.com/gulvarol/bsl1k.git
