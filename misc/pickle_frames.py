@@ -32,28 +32,27 @@ Aggregation
 %run -i misc/pickle_frames.py --dataset=bsl_signdict \
          --num_partitions 20 --refresh --aggregate
 """
-import argparse
 import io
-import multiprocessing as mp
 import os
+import time
 import pickle
 import socket
-import time
+import argparse
+import multiprocessing as mp
 from pathlib import Path
 
-import cv2
+import tqdm
+import numpy as np
 import humanize
 import matplotlib
 import matplotlib.pyplot as plt
-import numpy as np
-import tqdm
 from PIL import Image
 from zsvision.zs_iterm import zs_dispFig
+from zsvision.zs_utils import BlockTimer
 from zsvision.zs_multiproc import starmap_with_kwargs
-from zsvision.zs_utils import memcache
 
+import cv2
 from utils.imutils import resize_generic
-from utils.misc import BlockTimer
 
 
 def parse_video_content(
