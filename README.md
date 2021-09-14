@@ -106,6 +106,8 @@ The videos may then be downloaded via:
 You can download some of the pretrained models used in the experiments by running
 `bash misc/pretrained_models/download.sh` in the project root directory. All the other pretrained models from the experiments are provided in the [Experiments](https://github.com/gulvarol/bsl1k#experiments) section. The best BSL-1K model reported for the final experiments is [the first model](https://www.robots.ox.ac.uk/~vgg/research/bsl1k/data/experiments/bsl1k_i3d_m5_l20_kws8_ppose/model.pth.tar).
 
+*Note 2021.09.14: You might want to check an improved model [here](https://www.robots.ox.ac.uk/~vgg/research/bslattend/) from our follow-up CVPR'21 work.*
+
 ### Train
 The training launch for each experiment can be found in the [Experiments](https://github.com/gulvarol/bsl1k#experiments) section by clicking "run" links. The training can be ran by directly
 typing `python main.py <args>` on terminal with the arguments. We also provide the `exp/create_exp.py`
